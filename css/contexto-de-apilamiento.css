@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.phone {
+    position: relative;
+    border: 8px solid black;
+    border-radius: 40px;
+    height: 600px;
+    width: 300px;
+    background: #CCEFFF;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px 
+    rgba(0, 0, 0, 0.22);
+}
+.layer-1{
+    position: absolute;
+    z-index: 1;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    right: 60px;
+
+}
+.layer-2{
+    position: absolute;
+    z-index: 2;
+    height: 450px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 60px;
+}
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 220px;
+    height: 400px;
+    background: pink;
+    bottom: 0;
+}
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    height: 360px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    left: 50px;
+}
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    width: 220px;
+    height: 290px;
+    background: rgb(171, 171, 171);
+    border-bottom-left-radius: 40px;
+    bottom: 0;
+}
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    height: 230px;
+    width: 80px;
+    background: white;
+    bottom: 0;
+    right: 40px;
+}
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    right: 0;
+    width: 170px;
+    height: 180px;
+    background: pink;
+    border-bottom-right-radius: 30px;
+    bottom: 0;
+}
+.layer-8{
+    position: absolute;
+    z-index: 8;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 170px;
+    height: 90px;
+    background: rgb(0, 21, 255);
+    bottom: 0;
+}
+.layer-9{
+    position: absolute;
+    z-index: 9;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: pink;
+    border-bottom-left-radius: 30px;
+    bottom: 0;
+}
+.layer-10{
+    position: absolute;
+    z-index: 10;
+    right: 0;
+    width: 100px;
+    height: 70px;
+    background: rgb(105, 105, 105);
+    border-bottom-right-radius: 30px;
+    bottom: 0;
+
+}
