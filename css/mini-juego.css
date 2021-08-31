@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>
-  :root {
+:root {
     --dark-brown: #a54a38;
     --light-brown: #bf624c;
     --dark-green: #51af5e;
@@ -18,6 +9,7 @@
 
   body {
     display: grid;
+    counter-reset: score;
     height: 100vh;
     margin: 0;
     place-items: center;
@@ -83,21 +75,21 @@
     position: absolute;
     top: 15px;
     width: 4px;
-
+    
     animation-name: blink;
     animation-duration: 2s;
     animation-iteration-count: infinite;
   }
 
   @keyframes blink {
-    0% {
+    0% { 
       height: 4px;
     }
-    5% {
+    5% { 
       transform: translate(0px, 2px);
       height: 1px;
     }
-    10% {
+    10% { 
       transform: translate(0px, 0px);
       height: 4px;
     }
@@ -131,8 +123,8 @@
     background: #CCEFFF;
     border: 8px solid black;
     border-radius: 40px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
+    box-shadow: var(--shadow); /* After */
+    overflow: hidden; /* After */
     height: 600px;
     position: relative;
     width: 300px;
@@ -147,6 +139,19 @@
     top: 0;
     width: 80px;
     z-index: 2;
+  }
+
+  input[type=checkbox]:focus {
+    appearance: none;
+    outline: none;
+  }
+
+  input:checked {
+    counter-increment: score;
+  }
+
+  .score::after {
+    content: counter(score);
   }
 
   @keyframes bunny {
@@ -174,34 +179,30 @@
   }
 
   .layer-1 {
+  /*   background: white; */
     bottom: 0;
     height: 450px;
     position: absolute;
     right: 60px;
     width: 80px;
-
+    
+    /* After 4 */
     animation-name: layer;
     animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
 
-  @keyframes layer {
-    0% {
-      bottom: 0;
-    }
-    25% {
-      bottom: -80px;
-    }
-    100% {
-      bottom: 0;
-    }
-  }
-
   .layer-1 input[type=checkbox] {
+    /* After 4 */
+    animation-name: bunny;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
   }
 
   .layer-2 {
+  /*   background: white; */ /* After 3 */
     bottom: 0;
     height: 450px;
     position: absolute;
@@ -209,6 +210,7 @@
     width: 80px;
     z-index: 2;
     
+    /* After 4 */
     animation-name: layer;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -216,6 +218,7 @@
   }
 
   .layer-2 input[type=checkbox] {
+    /* After 4 */
     animation-name: bunny;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -223,14 +226,14 @@
   }
 
   .layer-3 {
-    background: var(--light-brown);
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    background: var(--light-brown); /* After */
+    border-radius: 20px; /* After */
+    box-shadow: var(--shadow); /* After */
     bottom: 0;
     height: 400px;
     left: 0;
     margin: 0 auto;
-    overflow: hidden;
+    overflow: hidden; /* After */
     position: absolute;
     right: 0;
     width: 220px;
@@ -238,6 +241,7 @@
   }
 
   .layer-4 {
+  /*   background: white; */ /* After 3 */
     bottom: 0;
     height: 350px;
     left: 15px;
@@ -245,6 +249,7 @@
     width: 80px;
     z-index: 4;
     
+    /* After 4 */
     animation-name: layer;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -252,6 +257,7 @@
   }
 
   .layer-4 input[type=checkbox] {
+    /* After 4 */
     animation-name: bunny;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -259,18 +265,19 @@
   }
 
   .layer-5 {
-    background: var(--light-brown);
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    background: var(--light-brown); /* After */
+    border-radius: 20px; /* After */
+    box-shadow: var(--shadow); /* After */
     bottom: 0;
     height: 300px;
-    overflow: hidden;
+    overflow: hidden; /* After */
     position: absolute;
     width: 200px;
     z-index: 5;
   }
 
   .layer-6 {
+  /*   background: white; */ /* After 3 */
     bottom: 0;
     height: 250px;
     position: absolute;
@@ -278,6 +285,7 @@
     width: 80px;
     z-index: 6;
     
+    /* After 4 */
     animation-name: layer;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -285,6 +293,7 @@
   }
 
   .layer-6 input[type=checkbox] {
+    /* After 4 */
     animation-name: bunny;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
@@ -292,12 +301,12 @@
   }
 
   .layer-7 {
-    background: var(--light-brown);
-    border-radius: 20px;
-    box-shadow: var(--shadow);
+    background: var(--light-brown); /* After */
+    border-radius: 20px; /* After */
+    box-shadow: var(--shadow); /* After */
     bottom: 0;
     height: 200px;
-    overflow: hidden;
+    overflow: hidden; /* After */
     position: absolute;
     right: 0;
     width: 150px;
@@ -305,6 +314,7 @@
   }
 
   .layer-8 {
+  /*   background: papayawhip; */
     bottom: 0;
     height: 120px;
     left: 0;
@@ -349,6 +359,7 @@
   }
 
   .layer-9 {
+  /*   background: white; */
     bottom: 0;
     height: 100px;
     position: absolute;
@@ -356,7 +367,7 @@
     z-index: 9;
   }
 
-  .layer-9__left-cloud {
+  .layer-9__left-cloud { 
     background: white;
     border-radius: 40px 40px 0 0;
     display: inline-block;
@@ -366,7 +377,7 @@
     width: 80px;
   }
 
-  .layer-9__right-cloud {
+  .layer-9__right-cloud { 
     background: white;
     border-radius: 0 40px 30px 0;
     bottom: 0;
@@ -378,6 +389,7 @@
   }
 
   .layer-10 {
+  /*   background: pink; */
     bottom: 0;
     height: 100px;
     position: absolute;
@@ -386,7 +398,7 @@
     z-index: 10;
   }
 
-  .layer-10__left-cloud {
+  .layer-10__left-cloud { 
     background: white;
     border-radius: 40px 0 0 30px;
     bottom: 0;
@@ -406,85 +418,21 @@
     position: absolute;
     width: 80px;
   }
-</style>
-<body>
-  <div class="phone">
-    <!-- bunny 1 -->
-    <div class="layer-1">
-      <input type="checkbox">
-      <div class="left-ear--outer"></div>
-      <div class="left-ear--inner"></div>
-      <div class="right-ear--outer"></div>
-      <div class="right-ear--inner"></div>
-      <div class="head">
-        <div class="head__eye head__eye--left"></div>
-        <div class="head__eye head__eye--right"></div>
-      </div>
-    </div>
-    <!-- bunny 2 -->
-    <div class="layer-2">
-      <div class="left-ear--outer"></div>
-      <div class="left-ear--inner"></div>
-      <div class="right-ear--outer"></div>
-      <div class="right-ear--inner"></div>
-      <div class="head">
-        <div class="head__eye head__eye--left"></div>
-        <div class="head__eye head__eye--right"></div>
-      </div>
-    </div>
-    <!-- wall 1 -->
-    <div class="layer-3">
-      <div class="lawn"></div>
-      <div class="land"></div>
-    </div>
-    <!-- bunny 3 -->
-    <div class="layer-4">
-      <div class="left-ear--outer"></div>
-      <div class="left-ear--inner"></div>
-      <div class="right-ear--outer"></div>
-      <div class="right-ear--inner"></div>
-      <div class="head">
-        <div class="head__eye head__eye--left"></div>
-        <div class="head__eye head__eye--right"></div>
-      </div>
-    </div>
-    <!-- wall 2 -->
-    <div class="layer-5">
-      <div class="lawn"></div>
-      <div class="land"></div>
-    </div>
-    <!-- bunny 4 -->
-    <div class="layer-6">
-      <div class="left-ear--outer"></div>
-      <div class="left-ear--inner"></div>
-      <div class="right-ear--outer"></div>
-      <div class="right-ear--inner"></div>
-      <div class="head">
-        <div class="head__eye head__eye--left"></div>
-        <div class="head__eye head__eye--right"></div>
-      </div>
-    </div> 
-    <!-- wall 3 -->
-    <div class="layer-7">
-      <div class="lawn"></div>
-      <div class="land"></div>
-    </div>
-    <!-- lawn 1 -->
-    <div class="layer-8">
-      <div class="layer-8__left-lawn"></div>
-      <div class="layer-8__center-lawn"></div>
-      <div class="layer-8__right-lawn"></div>
-    </div>
-    <!-- cloud 1 -->
-    <div class="layer-9">
-      <div class="layer-9__left-cloud"></div>
-      <div class="layer-9__right-cloud"></div>
-    </div>
-    <!-- cloud 2 -->
-    <div class="layer-10">
-      <div class="layer-10__left-cloud"></div>
-      <div class="layer-10__right-cloud"></div>
-    </div>
-  </div>  
-</body>
-</html>
+
+  .title {
+    display: flex;
+    justify-content: center;
+    margin: 45px 0 10px;
+  }
+
+  .title img {
+    width: 60%;
+  }
+
+  .score {
+    color: var(--light-brown);
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    text-align: center;
+  }
