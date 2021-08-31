@@ -40,9 +40,12 @@ body {
     left: 0;
     right: 0;
     margin: 0 auto;
-    width: 220px;
+    width: 240px;
     height: 400px;
-    background: pink;
+    background: sienna;
+    border-top: 5px solid greenyellow;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     bottom: 0;
 }
 .layer-4{
@@ -61,6 +64,9 @@ body {
     width: 220px;
     height: 290px;
     background: rgb(171, 171, 171);
+    border-top: 5px solid greenyellow;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-left-radius: 40px;
     bottom: 0;
 }
@@ -79,7 +85,10 @@ body {
     right: 0;
     width: 170px;
     height: 180px;
-    background: pink;
+    background: sienna;
+    border-top: 5px solid greenyellow;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     border-bottom-right-radius: 30px;
     bottom: 0;
 }
@@ -100,7 +109,7 @@ body {
     left: 0;
     width: 100px;
     height: 100px;
-    background: pink;
+    background: grey;
     border-bottom-left-radius: 30px;
     bottom: 0;
 }
@@ -113,5 +122,4 @@ body {
     background: rgb(105, 105, 105);
     border-bottom-right-radius: 30px;
     bottom: 0;
-
 }
